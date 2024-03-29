@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- parernt layout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_img"
+    tools:context=".AdminDashboard">
+
+    <!-- Scroll View -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- inner Linear Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Sponsored company name -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/brown">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/movingText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sposor"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/sponsorLogo"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="25dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/milk_magic_icon" />
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+            <!--End of Sponsored company name -->
+
+
+            <!-- Logo and app name -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/app_img"
+                        android:layout_width="45dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/img_bg"
+                        app:shapeAppearanceOverlay="@style/roundedImageView"
+                        android:src="@drawable/ramjikisena_logo" />
+
+
+                    <TextView
+                        android:id="@+id/app_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/app_name"
+                        android:textColor="@color/red"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonHome"
+                        android:layout_width="70dp"
+                        android:layout_height="36dp"
+                        android:backgroundTint="@color/brown"
+                        android:textColor="@color/white"
+                        android:text="Home"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+            <!-- End of Logo and app name -->
+
+            <TextView
+                android:layout_width="185dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:text="Admin Panel"
+                android:layout_gravity="center"
+                android:textColor="@color/brown"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <!--  Data Seciton -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/data_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white">
+
+                <!-- Horizontal Scroll View for Data Section -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="1,2,3,4,5,6"
+                        android:layout_gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_height="match_parent"
+                                android:layout_width="100dp"
+                                android:background="@drawable/table_background_heading"
+                                android:gravity="center"
+                                android:text="Username"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"
+                                android:padding="10dp"
+                                android:layout_column="1"/>
+
+                            <TextView
+                                android:layout_height="match_parent"
+                                android:layout_width="100dp"
+                                android:background="@drawable/table_background_heading"
+                                android:gravity="center"
+                                android:text="Name"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/golden"
+                                android:padding="10dp"
+                                android:layout_column="2"/>
+
+                            <TextView
+                                android:layout_height="match_parent"
+                                android:layout_width="100dp"
+                                android:background="@drawable/table_background_heading"
+                                android:gravity="center"
+                                android:text="City"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/dark_blue"
+                                android:padding="10dp"
+                                android:layout_column="3"/>
+
+                            <TextView
+                                android:layout_height="match_parent"
+                                android:layout_width="100dp"
+                                android:background="@drawable/table_background_heading"
+                                android:gravity="center"
+                                android:text="Total Count"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/green"
+                                android:padding="10dp"
+                                android:layout_column="4"/>
+
+                            <TextView
+                                android:layout_height="match_parent"
+                                android:layout_width="120dp"
+                                android:background="@drawable/table_background_heading"
+                                android:gravity="center"
+                                android:text="Contact"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"
+                                android:padding="10dp"
+                                android:layout_column="5"/>
+
+                            <TextView
+                                android:layout_height="match_parent"
+                                android:layout_width="110dp"
+                                android:background="@drawable/table_background_heading"
+                                android:gravity="center"
+                                android:text="Joining Date"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/golden"
+                                android:padding="10dp"
+                                android:layout_column="6"/>
+
+                        </TableRow>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/view_users_recycle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </TableLayout>
+
+                </LinearLayout>
+                </HorizontalScrollView>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- End of Data Seciton -->
+
+
+
+
+            <!-- Footer Section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="@color/brown">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:id="@+id/movingTextBottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/admin_bottom"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- End of Footer Section -->
+
+        </LinearLayout>
+        <!-- End of Inner Layout -->
+    </ScrollView>
+    <!-- End of ScrollView -->
+</LinearLayout>
+    <!-- End of parent layout -->

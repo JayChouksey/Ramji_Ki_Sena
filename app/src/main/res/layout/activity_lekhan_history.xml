@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- parernt layout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_img"
+    tools:context=".MainActivity">
+
+    <!-- Scroll View -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- inner Linear Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Sponsored company name -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/brown">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/movingText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sposor"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/sponsorLogo"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="25dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/milk_magic_icon" />
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+            <!--End of Sponsored company name -->
+
+
+            <!-- Logo and app name -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/app_img"
+                        android:layout_width="45dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/img_bg"
+                        app:shapeAppearanceOverlay="@style/roundedImageView"
+                        android:src="@drawable/ramjikisena_logo" />
+
+
+                    <TextView
+                        android:id="@+id/app_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/app_name"
+                        android:textColor="@color/red"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/HomeButton"
+                        android:layout_width="60dp"
+                        android:layout_height="36dp"
+                        android:backgroundTint="@color/brown"
+                        android:textColor="@color/white"
+                        android:text="Home"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+
+                    <!--
+                    <Button
+                        android:id="@+id/menuButton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/baseline_menu_24" />
+                        -->
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+            <!-- End of Logo and app name -->
+
+
+            <!-- Go to section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/brown">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/DailyDarshan"
+                        android:textColor="@color/yellow"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/ImpTemples"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Imp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@color/yellow"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/ourMission"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/missions"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/yellow"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:clickable="true"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/gloryOfRamNaam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/glory"
+                        android:textColor="@color/yellow"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"/>
+
+                    <TextView
+                        android:id="@+id/writingExperience"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/write"
+                        android:textColor="@color/yellow"
+                        android:textSize="16dp"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+            <!--End of Go to section -->
+
+            <!--  Mission Seciton -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="500dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daily Ramnaam Counts"
+                        android:layout_marginBottom="25dp"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="bold"
+                        android:textSize="30dp"
+                        android:textColor="@color/red"/>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="1,2"
+                        android:layout_gravity="center">
+                        <TableRow>
+
+                            <TextView
+                                android:background="@drawable/table_background_heading"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Date"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/golden"
+                                android:padding="10dp"
+                                android:layout_column="1"/>
+
+                            <TextView
+                                android:background="@drawable/table_background_heading"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Count"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/green"
+                                android:padding="10dp"
+                                android:layout_column="2"/>
+
+                        </TableRow>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/lekhan_history_recycle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </TableLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- End of Mission Seciton -->
+
+
+            <!-- Footer Section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="@color/brown">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/fb"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:text="@string/fb"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/youtube"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/youtube"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/movingTextBottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sposor"
+                            android:textColor="@color/white"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/sponsorLogoBottom"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="25dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/milk_magic_icon" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- End of Footer Section -->
+
+        </LinearLayout>
+        <!-- End of Inner Layout -->
+    </ScrollView>
+    <!-- End of ScrollView -->
+</LinearLayout>
+    <!-- End of parent layout -->

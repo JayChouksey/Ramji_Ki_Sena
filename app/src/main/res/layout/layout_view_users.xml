@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:stretchColumns="1,2,3,4,5,6">
+
+    <TableRow>
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="100dp"
+            android:background="@drawable/table_background_content"
+            android:gravity="center"
+            android:id="@+id/admin_username"
+            android:textSize="14dp"
+            android:textColor="@color/red"
+            android:padding="10dp"
+            android:layout_column="1"/>
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="100dp"
+            android:background="@drawable/table_background_content"
+            android:gravity="center"
+            android:id="@+id/admin_name"
+            android:textSize="14dp"
+            android:textColor="@color/golden"
+            android:padding="10dp"
+            android:layout_column="2"/>
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="100dp"
+            android:background="@drawable/table_background_content"
+            android:gravity="center"
+            android:id="@+id/admin_city"
+            android:textSize="14dp"
+            android:textColor="@color/dark_blue"
+            android:padding="10dp"
+            android:layout_column="3"/>
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="100dp"
+            android:background="@drawable/table_background_content"
+            android:gravity="center"
+            android:id="@+id/admin_total_count"
+            android:textSize="16dp"
+            android:textColor="@color/green"
+            android:padding="10dp"
+            android:layout_column="4"/>
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="120dp"
+            android:background="@drawable/table_background_content"
+            android:gravity="center"
+            android:id="@+id/admin_contact"
+            android:textSize="16dp"
+            android:textColor="@color/red"
+            android:padding="10dp"
+            android:layout_column="5"/>
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="110dp"
+            android:background="@drawable/table_background_content"
+            android:gravity="center"
+            android:id="@+id/admin_joining_date"
+            android:textSize="16dp"
+            android:textColor="@color/golden"
+            android:padding="10dp"
+            android:layout_column="6"/>
+
+    </TableRow>
+
+</TableLayout>

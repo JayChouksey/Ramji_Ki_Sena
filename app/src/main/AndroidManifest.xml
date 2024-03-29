@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- netwrok permissions for get and post data through api -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Download file to phone -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RamjiKiSena"
+        tools:targetApi="31">
+        <activity
+            android:name=".drawerfiles.ContactUs"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".drawerfiles.Gallery"
+            android:exported="false" />
+        <activity
+            android:name=".drawerfiles.Feedback"
+            android:exported="false" />
+        <activity
+            android:name=".drawerfiles.About"
+            android:exported="false" />
+        <activity
+            android:name=".ViewUsers"
+            android:exported="false" />
+        <activity
+            android:name=".AdminDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".LekhanHistory"
+            android:exported="false" />
+        <activity
+            android:name=".AllDevotees"
+            android:exported="false" />
+        <activity
+            android:name=".drawerfiles.PostAd"
+            android:exported="false" />
+        <activity
+            android:name=".drawerfiles.HelpAndSupport"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".MobileNumberLogin"
+            android:exported="false" />
+        <activity
+            android:name=".WritingExperience"
+            android:exported="false" />
+        <activity
+            android:name=".GloryOfRamnaam"
+            android:exported="false" />
+        <activity
+            android:name=".Mission"
+            android:exported="false" />
+        <activity
+            android:name=".ImportantTemples"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

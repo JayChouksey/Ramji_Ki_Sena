@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+<!--    <style name="Base.Theme.RamjiKiSena" parent="Theme.Material3.DayNight.NoActionBar">-->
+    // Changes from line3 to line 5 as button color was not changing
+    <style name="Base.Theme.RamjiKiSena" parent="Theme.AppCompat.NoActionBar">
+        <!-- Stop default splash screen. -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.RamjiKiSena" parent="Base.Theme.RamjiKiSena" />
+
+    <!-- To customize the width of the dialog box   -->
+    <style name="DialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">95%</item>
+        <item name="android:windowMinWidthMinor">95%</item>
+    </style>
+</resources>
