@@ -19,6 +19,11 @@ public class GloryOfRamnaam extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_glory_of_ramnaam);
 
+        // checking from which activity it came:
+        Intent intent = getIntent();
+        String check = intent.getStringExtra("checkPrev") ;
+
+
         // Text movement code
         {
             // To move text in the screen
@@ -62,6 +67,7 @@ public class GloryOfRamnaam extends AppCompatActivity {
             public void onClick(View v) {
                 // Start the second activity
                 Intent intent = new Intent(GloryOfRamnaam.this, ImportantTemples.class);
+                intent.putExtra("checkPrev", check);
                 startActivity(intent);
             }
         });
@@ -73,6 +79,7 @@ public class GloryOfRamnaam extends AppCompatActivity {
             public void onClick(View v) {
                 // Start the second activity
                 Intent intent = new Intent(GloryOfRamnaam.this, Mission.class);
+                intent.putExtra("checkPrev", check);
                 startActivity(intent);
             }
         });
@@ -84,6 +91,7 @@ public class GloryOfRamnaam extends AppCompatActivity {
             public void onClick(View v) {
                 // Start the second activity
                 Intent intent = new Intent(GloryOfRamnaam.this, GloryOfRamnaam.class);
+                intent.putExtra("checkPrev", check);
                 startActivity(intent);
             }
         });
@@ -95,6 +103,7 @@ public class GloryOfRamnaam extends AppCompatActivity {
             public void onClick(View v) {
                 // Start the second activity
                 Intent intent = new Intent(GloryOfRamnaam.this, WritingExperience.class);
+                intent.putExtra("checkPrev", check);
                 startActivity(intent);
             }
         });
@@ -105,17 +114,13 @@ public class GloryOfRamnaam extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Start the second activity
-
-                // checking from which activity it came:
-                Intent intent = getIntent();
-                String check = intent.getStringExtra("checkPrev") ;
-
                 if(check.equals("main")){
                     Intent intent2 = new Intent(GloryOfRamnaam.this, MainActivity.class);
                     startActivity(intent2);
                 }
                 if(check.equals("profile")){
-                    onBackPressed();
+                    Intent intent2 = new Intent(GloryOfRamnaam.this, Profile.class);
+                    startActivity(intent2);
                 }
                 if(check.equals("register")){
                     Intent intent2 = new Intent(GloryOfRamnaam.this, Register.class);

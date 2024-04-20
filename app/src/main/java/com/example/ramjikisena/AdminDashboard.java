@@ -161,7 +161,7 @@ public class AdminDashboard extends AppCompatActivity {
             TextView totalRamCountTextView = findViewById(R.id.TextViewRamCount);
 
             // Make a GET request to the profile endpoint
-            String apiDashboard = "https://restapiramji.onrender.com/admin/dashboard"; // API endpoint
+            String apiDashboard = "https://api.ramjikisena.com/admin/dashboard"; // API endpoint
 
             RequestQueue queue = Volley.newRequestQueue(this);
 
@@ -205,7 +205,7 @@ public class AdminDashboard extends AppCompatActivity {
 
     //--------------------------------------- Log out function for API call --------------------------------------------------
     private void logout() {
-        String urlLogOut = "https://restapiramji.onrender.com/auth/logout"; // API endpoint for logout
+        String urlLogOut = "https://api.ramjikisena.com/auth/logout"; // API endpoint for logout
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
 

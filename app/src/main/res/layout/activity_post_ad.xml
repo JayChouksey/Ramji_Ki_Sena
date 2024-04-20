@@ -10,7 +10,7 @@
 
     <!-- Scroll View -->
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1">
 
@@ -42,12 +42,12 @@
                     android:layout_height="wrap_content"
                     android:text="@string/sposor"
                     android:textColor="@color/white"
-                    android:textSize="13dp"
+                    android:textSize="13sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/sponsorLogo"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     android:layout_width="25dp"
                     android:layout_height="20dp"
                     android:src="@drawable/milk_magic_icon" />
@@ -82,9 +82,9 @@
                     android:id="@+id/app_img"
                     android:layout_width="45dp"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:background="@drawable/img_bg"
-                    android:src="@drawable/ramjikisena_logo"
+                    android:src="@drawable/icon_logoo"
                     app:shapeAppearanceOverlay="@style/roundedImageView" />
 
 
@@ -92,10 +92,10 @@
                     android:id="@+id/app_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="2dp"
                     android:layout_marginTop="5dp"
                     android:text="@string/app_name"
-                    android:textColor="@color/red"
+                    android:textColor="@color/brown"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -116,7 +116,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="@color/brown"
                     android:gravity="center"
-                    android:text="Home"
+                    android:text="@string/home"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="12sp"
@@ -153,7 +153,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Post Your Ad!"
+                    android:text="@string/post_your_ad2"
                     android:layout_gravity="center"
                     android:textColor="@color/white"
                     android:textSize="25sp"
@@ -168,7 +168,7 @@
                     android:layout_marginEnd="20dp"
                     android:layout_marginTop="30dp"
                     android:background="@drawable/edit_text_background"
-                    android:hint="Write the content of your ad.."
+                    android:hint="@string/write_the_content_of_your_ad"
                     android:gravity="center"
                     android:padding="12dp"
                     android:textColor="@color/black"
@@ -184,7 +184,7 @@
                     android:layout_marginTop="20dp"
                     android:gravity="center"
                     android:background="@drawable/edit_text_background"
-                    android:hint="Your Name"
+                    android:hint="@string/your_name"
                     android:padding="12dp"
                     android:textColor="@color/black"
                     android:textColorHint="@color/grey"
@@ -198,7 +198,7 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/edit_text_background"
                     android:gravity="center"
-                    android:hint="Your Contact no."
+                    android:hint="@string/your_contact_no"
                     android:padding="12dp"
                     android:textColor="@color/black"
                     android:textColorHint="@color/grey"
@@ -212,7 +212,7 @@
                     android:layout_marginBottom="25dp"
                     android:background="@drawable/edit_text_background"
                     android:padding="16dp"
-                    android:text="Send"
+                    android:text="@string/send"
                     android:textColor="@color/brown"
                     android:textSize="18sp" />
 
@@ -246,13 +246,13 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="25dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
                         android:src="@drawable/fb" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginEnd="20dp"
                         android:text="@string/fb"
                         android:textColor="@color/white"
                         android:textSize="18sp"
@@ -261,7 +261,7 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="25dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
                         android:src="@drawable/youtube" />
 
                     <TextView
@@ -290,12 +290,12 @@
                         android:layout_height="wrap_content"
                         android:text="@string/sposor"
                         android:textColor="@color/white"
-                        android:textSize="13dp"
+                        android:textSize="13sp"
                         android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/sponsorLogoBottom"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:layout_width="25dp"
                         android:layout_height="20dp"
                         android:src="@drawable/milk_magic_icon" />

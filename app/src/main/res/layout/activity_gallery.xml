@@ -78,20 +78,20 @@
                         android:id="@+id/app_img"
                         android:layout_width="45dp"
                         android:layout_height="40dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:background="@drawable/img_bg"
-                        app:shapeAppearanceOverlay="@style/roundedImageView"
-                        android:src="@drawable/ramjikisena_logo" />
+                        android:src="@drawable/icon_logoo"
+                        app:shapeAppearanceOverlay="@style/roundedImageView" />
 
 
                     <TextView
                         android:id="@+id/app_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="2dp"
                         android:layout_marginTop="5dp"
                         android:text="@string/app_name"
-                        android:textColor="@color/red"
+                        android:textColor="@color/brown"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -112,7 +112,7 @@
                         android:layout_height="36dp"
                         android:backgroundTint="@color/brown"
                         android:textColor="@color/white"
-                        android:text="Home"
+                        android:text="@string/home"
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:textAllCaps="false"
@@ -239,17 +239,43 @@
                 android:layout_height="500dp"
                 android:backgroundTint="@color/white">
 
-                <androidx.viewpager.widget.ViewPager
-                    android:id="@+id/viewPager"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="30dp"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gallery"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="30sp"
+                        android:textColor="@color/red"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@color/gray" />
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_height="wrap_content" >
 
 
-                </androidx.viewpager.widget.ViewPager>
+                    </androidx.viewpager.widget.ViewPager>
+
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -278,13 +304,13 @@
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="25dp"
-                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/fb"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="20dp"
+                            android:layout_marginEnd="20dp"
                             android:text="@string/fb"
                             android:textColor="@color/white"
                             android:textSize="18sp"
@@ -293,7 +319,7 @@
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="25dp"
-                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/youtube"/>
 
                         <TextView

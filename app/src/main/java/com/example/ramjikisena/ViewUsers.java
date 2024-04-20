@@ -101,7 +101,7 @@ public class ViewUsers extends AppCompatActivity {
         Intent intent = getIntent();
         String token = intent.getStringExtra("token");
 
-        String url = "https://restapiramji.onrender.com/admin/allUsers";
+        String url = "https://api.ramjikisena.com/admin/allUsers";
         List<Users> usersList = new ArrayList<>();
 
         RequestQueue queue = Volley.newRequestQueue(this);

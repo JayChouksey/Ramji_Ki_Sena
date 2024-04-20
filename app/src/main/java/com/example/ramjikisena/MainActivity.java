@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
             TextView TextViewTotalRamCount = findViewById(R.id.TextViewTotalRamCount);
             TextView TextViewRegisteredDevotees = findViewById(R.id.TextViewRegisteredDevotees);
 
-            String api = "https://restapiramji.onrender.com/user";
+            String api = "https://api.ramjikisena.com/user";
 
             JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, api, null, new Response.Listener<JSONObject>() {
                 @Override
@@ -227,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     // Get text from EditText fields
-                    Log.d("login", "clicked on login");
+                   loginButton.setText("LOADING...");
                     String loginID = editTextLoginID.getText().toString().trim();
                     String password = editTextPassword.getText().toString().trim();
 
@@ -238,7 +238,7 @@ public class MainActivity extends AppCompatActivity {
                                 + "&password=" + URLEncoder.encode(password, StandardCharsets.UTF_8);
 
                         // Make POST request using Volley
-                        String api = "https://restapiramji.onrender.com/auth/login"; // login API endpoint
+                        String api = "https://api.ramjikisena.com/auth/login"; // login API endpoint
                         StringRequest request = new StringRequest(Request.Method.POST, api,
                                 new Response.Listener<String>() {
                                     @Override
@@ -267,6 +267,7 @@ public class MainActivity extends AppCompatActivity {
                                                 startActivity(intent);
                                             }
                                         } catch (JSONException e) {
+                                            loginButton.setText(getResources().getString(R.string.loginButton));
                                             e.printStackTrace();
                                             // Unexpected response format, show an error message
                                             Toast.makeText(MainActivity.this, "Unexpected response. Please try again.", Toast.LENGTH_SHORT).show();
@@ -277,6 +278,7 @@ public class MainActivity extends AppCompatActivity {
                                     @Override
                                     public void onErrorResponse(VolleyError error) {
                                         // Handle error
+                                        loginButton.setText(getResources().getString(R.string.loginButton));
                                         if (error.networkResponse != null && error.networkResponse.data != null) {
                                             String errorMessage = new String(error.networkResponse.data);
                                             if (errorMessage.contains("password not match")) {

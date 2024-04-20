@@ -176,7 +176,7 @@ public class Gallery extends AppCompatActivity {
             public void run() {
                 handler.post(Update);
             }
-        }, 3000, 3000); // Change the time interval here (3000ms = 3 seconds)
+        }, 1500, 1500); // Change the time interval here (3000ms = 3 seconds)
 
     }
 }

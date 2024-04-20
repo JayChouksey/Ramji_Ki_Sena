@@ -139,7 +139,7 @@ public class MobileNumberLogin extends AppCompatActivity {
                             String requestBody = "contact=" + URLEncoder.encode(phoneNumber, StandardCharsets.UTF_8);
 
                             // Make POST request using Volley
-                            String api = "https://restapiramji.onrender.com/auth/forgot"; // login API endpoint
+                            String api = "https://api.ramjikisena.com/auth/forgot"; // login API endpoint
                             StringRequest request = new StringRequest(Request.Method.POST, api,
                                     new Response.Listener<String>() {
                                         @Override

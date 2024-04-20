@@ -46,7 +46,7 @@ public class AllDevotees extends AppCompatActivity implements DevoteeAdapter.OnR
     private int lastClickedPosition = RecyclerView.NO_POSITION; // color
     DevoteeAdapter adapter;
 
-    String urlAllDevotees = "https://restapiramji.onrender.com/user/allDevotees";
+    String urlAllDevotees = "https://api.ramjikisena.com/user/allDevotees";
 
     // Get the authorization token passed from the previous activity
 
@@ -98,6 +98,7 @@ public class AllDevotees extends AppCompatActivity implements DevoteeAdapter.OnR
                     public void onClick(View v) {
                         // Start the second activity
                         Intent intent = new Intent(AllDevotees.this, ImportantTemples.class);
+                        intent.putExtra("checkPrev","profile" );
                         startActivity(intent);
                     }
                 });
@@ -109,6 +110,7 @@ public class AllDevotees extends AppCompatActivity implements DevoteeAdapter.OnR
                     public void onClick(View v) {
                         // Start the second activity
                         Intent intent = new Intent(AllDevotees.this, Mission.class);
+                        intent.putExtra("checkPrev","profile" );
                         startActivity(intent);
                     }
                 });
@@ -120,6 +122,7 @@ public class AllDevotees extends AppCompatActivity implements DevoteeAdapter.OnR
                     public void onClick(View v) {
                         // Start the second activity
                         Intent intent = new Intent(AllDevotees.this, GloryOfRamnaam.class);
+                        intent.putExtra("checkPrev","profile" );
                         startActivity(intent);
                     }
                 });
@@ -131,6 +134,7 @@ public class AllDevotees extends AppCompatActivity implements DevoteeAdapter.OnR
                     public void onClick(View v) {
                         // Start the second activity
                         Intent intent = new Intent(AllDevotees.this, WritingExperience.class);
+                        intent.putExtra("checkPrev","profile" );
                         startActivity(intent);
                     }
                 });
@@ -141,7 +145,8 @@ public class AllDevotees extends AppCompatActivity implements DevoteeAdapter.OnR
                     @Override
                     public void onClick(View v) {
                         // Start the second activity
-                        onBackPressed();
+                        Intent intent = new Intent(AllDevotees.this, Profile.class);
+                        startActivity(intent);
                     }
                 });
 
@@ -170,7 +175,7 @@ public class AllDevotees extends AppCompatActivity implements DevoteeAdapter.OnR
         Intent intent = getIntent();
         String token = intent.getStringExtra("token");
 
-        String url = "https://restapiramji.onrender.com/user/allDevotees";
+        String url = "https://api.ramjikisena.com/user/allDevotees";
         List<Devotee> devoteeList = new ArrayList<>();
 
         RequestQueue queue = Volley.newRequestQueue(this);

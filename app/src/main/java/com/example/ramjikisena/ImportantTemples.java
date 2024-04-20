@@ -132,7 +132,8 @@ public class ImportantTemples extends AppCompatActivity {
                     startActivity(intent2);
                 }
                 if(check.equals("profile")){
-                    onBackPressed();
+                    Intent intent2 = new Intent(ImportantTemples.this, Profile.class);
+                    startActivity(intent2);
                 }
                 if(check.equals("register")){
                     Intent intent2 = new Intent(ImportantTemples.this, Register.class);

@@ -86,9 +86,9 @@
                         android:id="@+id/app_img"
                         android:layout_width="45dp"
                         android:layout_height="40dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:background="@drawable/img_bg"
-                        android:src="@drawable/ramjikisena_logo"
+                        android:src="@drawable/icon_logoo"
                         app:shapeAppearanceOverlay="@style/roundedImageView" />
 
 
@@ -96,10 +96,10 @@
                         android:id="@+id/app_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="2dp"
                         android:layout_marginTop="5dp"
                         android:text="@string/app_name"
-                        android:textColor="@color/red"
+                        android:textColor="@color/brown"
                         android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -120,7 +120,7 @@
                         android:layout_gravity="center"
                         android:backgroundTint="@color/brown"
                         android:gravity="center"
-                        android:text="Home"
+                        android:text="@string/home"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="12sp"
@@ -343,7 +343,7 @@
                             android:id="@+id/JayShriRam"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Jay Shri Ram - 🙎‍"
+                            android:text="@string/jay_shri_ram"
                             android:textColor="@color/yellow"
                             android:textSize="15dp"
                             android:textStyle="bold" />
@@ -390,9 +390,21 @@
                             android:backgroundTint="@color/white"
                             android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
                             android:gravity="center"
-                            android:text="English"
+                            android:text="@string/english2"
                             android:textAllCaps="false"
                             android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/button_LekhanHistory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/golden"
+                            android:gravity="center"
+                            android:text="@string/lekhan_history"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -409,29 +421,6 @@
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
-                        <Button
-                            android:id="@+id/button_LekhanHistory"
-                            android:layout_width="70dp"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/golden"
-                            android:gravity="center"
-                            android:text="Lekhan\nHistory"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                        <Button
-                            android:id="@+id/button_LogOut"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/golden"
-                            android:gravity="center"
-                            android:text="Log\nOut"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
 
                     </LinearLayout>
                     <!-- End of Buttons -->
@@ -448,7 +437,7 @@
                         android:id="@+id/Rank"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Your Rank"
+                        android:text="@string/your_rank"
                         android:textColor="@color/textProfile"
                         android:textSize="17sp"
                         android:textStyle="bold" />
@@ -476,9 +465,9 @@
                         android:id="@+id/CurrentCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Current Ramnaam Count"
+                        android:text="@string/current_ramnaam_count"
                         android:textColor="@color/textProfile"
-                        android:textSize="17dp"
+                        android:textSize="17sp"
                         android:textStyle="bold" />
 
                     <View
@@ -504,7 +493,7 @@
                         android:id="@+id/TotalCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Total Ramnaam Count"
+                        android:text="@string/total_ramnaam_count"
                         android:textColor="@color/textProfile"
                         android:textSize="17sp"
                         android:textStyle="bold" />
@@ -521,7 +510,7 @@
                         android:gravity="center"
                         android:text="..."
                         android:textColor="@color/dark_blue"
-                        android:textSize="17dp"
+                        android:textSize="17sp"
                         android:textStyle="bold" />
 
                     <View
@@ -532,9 +521,9 @@
                         android:id="@+id/MalaCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Total Mala Count"
+                        android:text="@string/total_mala_count"
                         android:textColor="@color/textProfile"
-                        android:textSize="17dp"
+                        android:textSize="17sp"
                         android:textStyle="bold" />
 
                     <View
@@ -643,7 +632,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
                 android:backgroundTint="@color/brown"
-                android:text="ALL DEVOTEES"
+                android:text="@string/all_devotees2"
                 android:textColor="@color/yellow"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -668,12 +657,12 @@
                         android:layout_height="wrap_content"
                         android:text="@string/sposor"
                         android:textColor="@color/white"
-                        android:textSize="13dp"
+                        android:textSize="13sp"
                         android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/sponsorLogoBottom"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:layout_width="25dp"
                         android:layout_height="20dp"
                         android:src="@drawable/milk_magic_icon" />

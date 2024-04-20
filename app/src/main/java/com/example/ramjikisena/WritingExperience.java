@@ -19,6 +19,11 @@ public class WritingExperience extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_writing_experience);
 
+        // checking from which activity it came:
+        Intent intent = getIntent();
+        String check = intent.getStringExtra("checkPrev") ;
+
+
         // Text movement code
         {
             // To move text in the screen
@@ -62,6 +67,7 @@ public class WritingExperience extends AppCompatActivity {
                 public void onClick(View v) {
                     // Start the second activity
                     Intent intent = new Intent(WritingExperience.this, ImportantTemples.class);
+                    intent.putExtra("checkPrev", check);
                     startActivity(intent);
                 }
             });
@@ -73,6 +79,7 @@ public class WritingExperience extends AppCompatActivity {
                 public void onClick(View v) {
                     // Start the second activity
                     Intent intent = new Intent(WritingExperience.this, Mission.class);
+                    intent.putExtra("checkPrev", check);
                     startActivity(intent);
                 }
             });
@@ -84,6 +91,7 @@ public class WritingExperience extends AppCompatActivity {
                 public void onClick(View v) {
                     // Start the second activity
                     Intent intent = new Intent(WritingExperience.this, GloryOfRamnaam.class);
+                    intent.putExtra("checkPrev", check);
                     startActivity(intent);
                 }
             });
@@ -95,6 +103,7 @@ public class WritingExperience extends AppCompatActivity {
                 public void onClick(View v) {
                     // Start the second activity
                     Intent intent = new Intent(WritingExperience.this, WritingExperience.class);
+                    intent.putExtra("checkPrev", check);
                     startActivity(intent);
                 }
             });
@@ -105,16 +114,14 @@ public class WritingExperience extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     // Start the second activity
-                    // checking from which activity it came:
-                    Intent intent = getIntent();
-                    String check = intent.getStringExtra("checkPrev") ;
 
                     if(check.equals("main")){
                         Intent intent2 = new Intent(WritingExperience.this, MainActivity.class);
                         startActivity(intent2);
                     }
                     if(check.equals("profile")){
-                        onBackPressed();
+                        Intent intent2 = new Intent(WritingExperience.this, Profile.class);
+                        startActivity(intent2);
                     }
                     if(check.equals("register")){
                         Intent intent2 = new Intent(WritingExperience.this, Register.class);

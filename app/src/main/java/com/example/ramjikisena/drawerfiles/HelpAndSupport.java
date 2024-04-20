@@ -78,12 +78,12 @@ public class HelpAndSupport extends AppCompatActivity {
                 String name = editTextName.getText().toString().trim();
                 String contact = editTextContact.getText().toString().trim();
 
-                String message = "Name: " + name + "\n\nContact: " + contact + "\n\nFeedback: " + helpMessage;
+                String message = "*Name:* " + name + "\n\n*Contact:* " + contact + "\n\n*Feedback:* " + helpMessage;
 
                 if (!helpMessage.isEmpty()) {
                     // Send message to WhatsApp
                     Intent whatsappIntent = new Intent(Intent.ACTION_VIEW);
-                    whatsappIntent.setData(Uri.parse("https://api.whatsapp.com/send?phone=+918770994162&text=" + message));
+                    whatsappIntent.setData(Uri.parse("https://api.whatsapp.com/send?phone=+919584922444&text=" + message));
                     startActivity(whatsappIntent);
 
 /*                    // Send message via Email

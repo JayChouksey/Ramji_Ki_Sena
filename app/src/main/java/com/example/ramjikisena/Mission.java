@@ -83,8 +83,12 @@ public class Mission extends AppCompatActivity {
         mission.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intentSend = getIntent();
+                String sendStr = intentSend.getStringExtra("checkPrev") ;
+
                 // Start the second activity
                 Intent intent = new Intent(Mission.this, Mission.class);
+                intent.putExtra("checkPrev",sendStr);
                 startActivity(intent);
             }
         });
@@ -94,8 +98,12 @@ public class Mission extends AppCompatActivity {
         ramNaamGlory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intentSend = getIntent();
+                String sendStr = intentSend.getStringExtra("checkPrev") ;
+
                 // Start the second activity
                 Intent intent = new Intent(Mission.this, GloryOfRamnaam.class);
+                intent.putExtra("checkPrev",sendStr);
                 startActivity(intent);
             }
         });
@@ -105,8 +113,12 @@ public class Mission extends AppCompatActivity {
         write.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intentSend = getIntent();
+                String sendStr = intentSend.getStringExtra("checkPrev") ;
+
                 // Start the second activity
                 Intent intent = new Intent(Mission.this, WritingExperience.class);
+                intent.putExtra("checkPrev",sendStr);
                 startActivity(intent);
             }
         });
@@ -127,7 +139,8 @@ public class Mission extends AppCompatActivity {
                     startActivity(intent2);
                 }
                 if(check.equals("profile")){
-                    onBackPressed();
+                    Intent intent2 = new Intent(Mission.this, Profile.class);
+                    startActivity(intent2);
                 }
                 if(check.equals("register")){
                     Intent intent2 = new Intent(Mission.this, Register.class);

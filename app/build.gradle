@@ -41,4 +41,5 @@ dependencies {
     // Dependencies added for project
     implementation 'me.biubiubiu.justifytext:library:1.1' // to justify the text
     implementation 'com.android.volley:volley:1.2.1' // to connect with api
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17' // to add gif
 }

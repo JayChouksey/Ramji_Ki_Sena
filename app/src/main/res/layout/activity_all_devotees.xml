@@ -41,12 +41,12 @@
                         android:layout_height="wrap_content"
                         android:text="@string/sposor"
                         android:textColor="@color/white"
-                        android:textSize="13dp"
+                        android:textSize="13sp"
                         android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/sponsorLogo"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:layout_width="25dp"
                         android:layout_height="20dp"
                         android:src="@drawable/milk_magic_icon" />
@@ -78,20 +78,20 @@
                         android:id="@+id/app_img"
                         android:layout_width="45dp"
                         android:layout_height="40dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:background="@drawable/img_bg"
-                        app:shapeAppearanceOverlay="@style/roundedImageView"
-                        android:src="@drawable/ramjikisena_logo" />
+                        android:src="@drawable/icon_logoo"
+                        app:shapeAppearanceOverlay="@style/roundedImageView" />
 
 
                     <TextView
                         android:id="@+id/app_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="2dp"
                         android:layout_marginTop="5dp"
                         android:text="@string/app_name"
-                        android:textColor="@color/red"
+                        android:textColor="@color/brown"
                         android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -111,7 +111,7 @@
                         android:layout_height="36dp"
                         android:backgroundTint="@color/brown"
                         android:textColor="@color/white"
-                        android:text="Home"
+                        android:text="@string/home"
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:textAllCaps="false"
@@ -166,7 +166,8 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:background="?android:attr/selectableItemBackground"
-                            android:clickable="true"/>
+                            android:clickable="true"
+                            android:focusable="true" />
 
                         <TextView
                             android:id="@+id/ourMission"
@@ -178,7 +179,8 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:background="?android:attr/selectableItemBackground"
-                            android:clickable="true"/>
+                            android:clickable="true"
+                            android:focusable="true" />
 
                     </LinearLayout>
 
@@ -192,7 +194,8 @@
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:background="?android:attr/selectableItemBackground"
-                        android:clickable="true"/>
+                        android:clickable="true"
+                        android:focusable="true" />
 
                     <TextView
                         android:id="@+id/writingExperience"
@@ -205,7 +208,8 @@
                         android:layout_marginTop="10dp"
                         android:textStyle="bold"
                         android:background="?android:attr/selectableItemBackground"
-                        android:clickable="true"/>
+                        android:clickable="true"
+                        android:focusable="true" />
 
                 </LinearLayout>
 
@@ -230,7 +234,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="All Devotees"
+                        android:text="@string/all_devotees"
                         android:layout_gravity="center"
                         android:layout_marginBottom="25dp"
                         android:layout_marginTop="15dp"
@@ -249,8 +253,8 @@
                                 android:background="@drawable/table_background_heading"
                                 android:layout_width="40dp"
                                 android:layout_height="match_parent"
-                                android:text="Rank \n"
-                                android:textSize="16dp"
+                                android:text="@string/rank_n"
+                                android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:gravity="center"
                                 android:textColor="@color/red"
@@ -261,9 +265,9 @@
                                 android:background="@drawable/table_background_heading"
                                 android:layout_width="80dp"
                                 android:layout_height="match_parent"
-                                android:text="Name\n"
+                                android:text="@string/name_n"
                                 android:gravity="center"
-                                android:textSize="16dp"
+                                android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/golden"
                                 android:padding="10dp"
@@ -273,8 +277,8 @@
                                 android:background="@drawable/table_background_heading"
                                 android:layout_width="60dp"
                                 android:layout_height="match_parent"
-                                android:text="Today's Count"
-                                android:textSize="16dp"
+                                android:text="@string/today_s_count"
+                                android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:gravity="center"
                                 android:textColor="@color/dark_blue"
@@ -285,8 +289,8 @@
                                 android:background="@drawable/table_background_heading"
                                 android:layout_width="80dp"
                                 android:layout_height="match_parent"
-                                android:text="Total \nCount"
-                                android:textSize="16dp"
+                                android:text="@string/total_ncount"
+                                android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:gravity="center"
                                 android:textColor="@color/green"

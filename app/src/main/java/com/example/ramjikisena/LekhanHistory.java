@@ -91,6 +91,7 @@ public class LekhanHistory extends AppCompatActivity {
                 public void onClick(View v) {
                     // Start the second activity
                     Intent intent = new Intent(LekhanHistory.this, ImportantTemples.class);
+                    intent.putExtra("checkPrev","profile" );
                     startActivity(intent);
                 }
             });
@@ -102,6 +103,7 @@ public class LekhanHistory extends AppCompatActivity {
                 public void onClick(View v) {
                     // Start the second activity
                     Intent intent = new Intent(LekhanHistory.this, Mission.class);
+                    intent.putExtra("checkPrev","profile" );
                     startActivity(intent);
                 }
             });
@@ -113,6 +115,7 @@ public class LekhanHistory extends AppCompatActivity {
                 public void onClick(View v) {
                     // Start the second activity
                     Intent intent = new Intent(LekhanHistory.this, GloryOfRamnaam.class);
+                    intent.putExtra("checkPrev","profile" );
                     startActivity(intent);
                 }
             });
@@ -124,6 +127,7 @@ public class LekhanHistory extends AppCompatActivity {
                 public void onClick(View v) {
                     // Start the second activity
                     Intent intent = new Intent(LekhanHistory.this, WritingExperience.class);
+                    intent.putExtra("checkPrev","profile" );
                     startActivity(intent);
                 }
             });
@@ -134,7 +138,8 @@ public class LekhanHistory extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     // Start the second activity
-                   onBackPressed();
+                   Intent intent = new Intent(LekhanHistory.this, Profile.class);
+                   startActivity(intent);
                 }
             });
 
@@ -145,20 +150,6 @@ public class LekhanHistory extends AppCompatActivity {
         //----------------------------------------------------------------------------------------------------------
 
         // Putting history data into table
-/*        recyclerView = findViewById(R.id.lekhan_history_recycle);
-        List<History> historyList = new ArrayList<>();
-
-        historyList.add(new History("02/05/2023","253"));
-        historyList.add(new History("02/05/2023","253"));
-        historyList.add(new History("02/05/2023","253"));
-        historyList.add(new History("02/05/2023","253"));
-        historyList.add(new History("02/05/2023","253"));
-
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new HistoryAdapter(historyList);
-        recyclerView.setAdapter(adapter);*/
-
         fetchUserData();
     }
 
@@ -168,7 +159,7 @@ public class LekhanHistory extends AppCompatActivity {
         Intent intent = getIntent();
         String token = intent.getStringExtra("token");
 
-        String url = "https://restapiramji.onrender.com/user/lekhanHistory";
+        String url = "https://api.ramjikisena.com/user/lekhanHistory";
         List<History> historyList = new ArrayList<>();
 
         RequestQueue queue = Volley.newRequestQueue(this);

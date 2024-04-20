@@ -2,13 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:backgroundTint="@color/white">
 
         <LinearLayout
@@ -18,30 +19,19 @@
 
             <!-- Zero horizontal layout -->
             <LinearLayout
+                android:id="@+id/Music0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/Music0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="कोई भजन नहीं"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:id="@+id/Music0RadioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="@color/gray" />
 
             </LinearLayout>
 
@@ -52,13 +42,13 @@
 
             <!-- First horizontal layout -->
             <LinearLayout
+                android:id="@+id/Music1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/Music1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="राम धुन 1"
@@ -66,16 +56,6 @@
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
 
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:id="@+id/Music1RadioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="@color/gray" />
 
             </LinearLayout>
 
@@ -86,30 +66,19 @@
 
             <!-- Second horizontal layout -->
             <LinearLayout
+                android:id="@+id/Music2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/Music2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="राम धुन 2"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:id="@+id/Music2RadioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="@color/gray" />
 
             </LinearLayout>
 
@@ -120,13 +89,13 @@
 
             <!-- Third horizontal layout -->
             <LinearLayout
+                android:id="@+id/Music3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/Music3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="राम धुन 3"
@@ -134,16 +103,6 @@
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
 
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:id="@+id/Music3RadioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="@color/gray" />
 
             </LinearLayout>
 
@@ -154,13 +113,13 @@
 
             <!-- Fourth horizontal layout -->
             <LinearLayout
+                android:id="@+id/Music4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/Music4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="राम धुन 4"
@@ -168,16 +127,6 @@
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
 
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:id="@+id/Music4RadioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="@color/gray" />
 
             </LinearLayout>
 
@@ -188,30 +137,19 @@
 
             <!-- Fifth horizontal layout -->
             <LinearLayout
+                android:id="@+id/Music5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/Music5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="राम धुन 5"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:id="@+id/Music5RadioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="@color/gray" />
 
             </LinearLayout>
 
@@ -222,6 +160,7 @@
 
             <!-- Sixth horizontal layout -->
             <LinearLayout
+                android:id="@+id/Music6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -229,24 +168,12 @@
 
 
                 <TextView
-                    android:id="@+id/Music6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="राम धुन 6"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:id="@+id/Music6RadioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="@color/gray" />
 
             </LinearLayout>
 

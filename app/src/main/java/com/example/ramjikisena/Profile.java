@@ -61,6 +61,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.File;
 import java.util.HashMap;
@@ -87,18 +88,16 @@ public class Profile extends AppCompatActivity{
     private TextView textViewTotalCount;
     private TextView textViewMalaCount;
     private TextView textViewUserName;
+    Button buttonLogOut;
 
     // for drawer navigation
-    private DrawerLayout drawerLayout;
-    private NavigationView navigationView;
     private RelativeLayout customDrawerLayout;
-    private ActionBarDrawerToggle actionBarDrawerToggle;
     private boolean isDrawerOpen = false;
     private final int DRAWER_WIDTH = 250; // Width of the drawer layout in dp
 
     // API Links
-    String urlLogOut = "https://restapiramji.onrender.com/auth/logout"; // API endpoint for logout
-    String urlSave = "https://restapiramji.onrender.com/user/save"; // API endpoint for save
+    String urlLogOut = "https://api.ramjikisena.com/auth/logout"; // API endpoint for logout
+    String urlSave = "https://api.ramjikisena.com/user/save"; // API endpoint for save
 
     // Save checks
     private boolean isSave = true;
@@ -450,7 +449,11 @@ public class Profile extends AppCompatActivity{
                 }
             });
 
-            TextView drawerPostAd, drawerAbout, drawerGallery, drawerShare, drawerFeedback, drawerHelp, drawerCall;
+            LinearLayout drawerPostAd, drawerAbout, drawerGallery, drawerShare, drawerFeedback,
+                    drawerHelp, drawerCall, drawerLogout;
+            TextView drawerPostAd2, drawerAbout2, drawerGallery2, drawerShare2, drawerFeedback2,
+                    drawerHelp2, drawerCall2, drawerLogout2;
+
             drawerPostAd = findViewById(R.id.drawer_postAd);
             drawerAbout = findViewById(R.id.drawer_about);
             drawerGallery = findViewById(R.id.drawer_gallery);
@@ -458,6 +461,16 @@ public class Profile extends AppCompatActivity{
             drawerFeedback = findViewById(R.id.drawer_feedback);
             drawerHelp = findViewById(R.id.drawer_help);
             drawerCall = findViewById(R.id.drawer_call);
+            drawerLogout = findViewById(R.id.drawer_logout);
+
+            drawerPostAd2 = findViewById(R.id.drawer_postAd2);
+            drawerAbout2 = findViewById(R.id.drawer_about2);
+            drawerGallery2 = findViewById(R.id.drawer_gallery2);
+            drawerShare2 = findViewById(R.id.drawer_share2);
+            drawerFeedback2 = findViewById(R.id.drawer_feedback2);
+            drawerHelp2 = findViewById(R.id.drawer_help2);
+            drawerCall2 = findViewById(R.id.drawer_call2);
+            drawerLogout2 = findViewById(R.id.drawer_logout2);
 
             drawerPostAd.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -499,7 +512,6 @@ public class Profile extends AppCompatActivity{
                     closeDrawer();
                 }
             });
-
             drawerCall.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -529,23 +541,99 @@ public class Profile extends AppCompatActivity{
                     closeDrawer();
                 }
             });
-
-
-
-
-            /*drawerLayout = findViewById(R.id.drawer_layout);
-            navigationView = findViewById(R.id.nav_view);
-                // Set click listener on menu button to open/close the drawer
-            menuButton.setOnClickListener(new View.OnClickListener() {
+            drawerLogout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (drawerLayout.isDrawerOpen(navigationView)) {
-                        drawerLayout.closeDrawer(navigationView);
-                    } else {
-                        drawerLayout.openDrawer(navigationView);
+                    if(isSave){
+                        logout(); // user defined function
+                    }
+                    else{
+                        showDialog();
                     }
                 }
-            });*/
+            });
+
+            drawerPostAd2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Profile.this, PostAd.class);
+                    startActivity(intent);
+                    closeDrawer();
+                }
+            });
+            drawerAbout2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Profile.this, About.class);
+                    startActivity(intent);
+                    closeDrawer();
+                }
+            });
+            drawerGallery2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Profile.this, Gallery.class);
+                    startActivity(intent);
+                    closeDrawer();
+                }
+            });
+            drawerFeedback2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Profile.this, Feedback.class);
+                    startActivity(intent);
+                    closeDrawer();
+                }
+            });
+            drawerHelp2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Profile.this, HelpAndSupport.class);
+                    startActivity(intent);
+                    closeDrawer();
+                }
+            });
+            drawerCall2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Profile.this, ContactUs.class);
+                    startActivity(intent);
+                    closeDrawer();
+                }
+            });
+            drawerShare2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Toast.makeText(Profile.this,"Share Clicked",Toast.LENGTH_SHORT).show();
+                    // Your app's package name on the Play Store
+                    String appPackageName = getPackageName();
+                    // Play Store URL of your app
+                    String appUrl = "https://www.ramjikisena.com/" + appPackageName;
+
+                    // Create an Intent with ACTION_SEND to share the app link
+                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                    shareIntent.setType("text/plain");
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Check out this app!");
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, "Download and install the app: " + appUrl);
+
+                    // Start the activity for sharing
+                    startActivity(Intent.createChooser(shareIntent, "Share via"));
+
+                    closeDrawer();
+                }
+            });
+            drawerLogout2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(isSave){
+                        logout(); // user defined function
+                    }
+                    else{
+                        showDialog();
+                    }
+                }
+            });
+
 
 
         }
@@ -569,7 +657,7 @@ public class Profile extends AppCompatActivity{
 
 
         // Make a GET request to the profile endpoint
-        String apiProfile = "https://restapiramji.onrender.com/user/profile"; // API endpoint
+        String apiProfile = "https://api.ramjikisena.com/user/profile"; // API endpoint
 
         RequestQueue queue = Volley.newRequestQueue(this);
 
@@ -618,27 +706,6 @@ public class Profile extends AppCompatActivity{
         // End of Collecting profile data using API
 
         // ----------------------------------------------------------------------------------------------------
-
-        // -------------------------------Log Out Button implementation using API---------------------------------------------
-        {
-            Button buttonLogOut = findViewById(R.id.button_LogOut);
-
-            buttonLogOut.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(isSave){
-                        Toast.makeText(Profile.this, "Logout done", Toast.LENGTH_SHORT).show();
-                        logout(); // user defined function
-                    }
-                    else{
-                        showDialog();
-                    }
-
-                }
-
-            });
-        }
-        // --------------------------End of Log Out Button implementation using API---------------------------------------------
 
         // ------------------------------------------------------------------------------------------------------------------------
 
@@ -765,6 +832,7 @@ public class Profile extends AppCompatActivity{
                                 editor.commit();
 
                                 // Logout successful, navigate to MainActivity
+                                Toast.makeText(Profile.this, "Logout done", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(Profile.this, MainActivity.class);
                                 startActivity(intent);
                                 finish(); // Close the current activity
@@ -835,91 +903,43 @@ public class Profile extends AppCompatActivity{
         popupWindow.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
         // Find radio buttons in popup layout
-        RadioButton englishRadioButton = popupView.findViewById(R.id.englishRadioButton);
-        RadioButton hindiRadioButton = popupView.findViewById(R.id.hindiRadioButton);
-        TextView englishText = popupView.findViewById(R.id.englishText);
-        TextView hindiText = popupView.findViewById(R.id.hindiText);
+        LinearLayout englishText = popupView.findViewById(R.id.englishText);
+        LinearLayout hindiText = popupView.findViewById(R.id.hindiText);
 
-        // Find the textview and buttons to change its language
-        TextView movingText = findViewById(R.id.movingText);
-        TextView AppName = findViewById(R.id.app_name);
-        TextView GotoTitle = findViewById(R.id.GoToTitle);
-        TextView ImpTemples = findViewById(R.id.ImpTemples);
-        TextView ourMission = findViewById(R.id.ourMission);
-        TextView gloryOfRamNaam = findViewById(R.id.gloryOfRamNaam);
-        TextView writingExperience = findViewById(R.id.writingExperience);
-        TextView Welcome = findViewById(R.id.Welcome);
-        TextView JayShriRam = findViewById(R.id.JayShriRam);
-        TextView Rank = findViewById(R.id.Rank);
-        TextView CurrentCount = findViewById(R.id.CurrentCount);
-        TextView TotalCount = findViewById(R.id.TotalCount);
-        TextView MalaCount = findViewById(R.id.MalaCount);
-        TextView movingTextBottom = findViewById(R.id.movingTextBottom);
-
-        Button goToHomeButton = findViewById(R.id.goToHomeButton);
-        Button button_LekhanHistory = findViewById(R.id.button_LekhanHistory);
 
         // Set click listener for radio buttons
-        englishRadioButton.setOnClickListener(new View.OnClickListener() {
+        englishText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle English radio button click
-                languageButton.setText("English");
 
                 // Change text to English
-                englishText.setText("English");
-                hindiText.setText("Hindi");
+                Locale locale = new Locale("");
+                Locale.setDefault(locale);
 
-                movingText.setText("Jayshri Gayatri Food Products Pvt. Ltd. Milk magic");
-                AppName.setText("Ramji Ki Sena");
-                GotoTitle.setText("Daily Darshan & Ram naam Meditation \uD83D\uDC49");
-                ImpTemples.setText("\uD83D\uDEA9 Important temples of Ayodhya");
-                ourMission.setText("\uD83C\uDFAF Our Missions");
-                gloryOfRamNaam.setText("\uD83D\uDCD6 Glory of Ram naam");
-                writingExperience.setText("✍\uFE0F Writing experience & feedback \n");
-                Welcome.setText("Welcome to Ramji Ki Sena");
-                JayShriRam.setText("Jay Shri Ram - \uD83D\uDE4E");
-                Rank.setText("Your Rank");
-                CurrentCount.setText("Current Ramnaam Count");
-                TotalCount.setText("Total Ramnaam Count");
-                MalaCount.setText("Total Mala Count");
-                movingTextBottom.setText("Jayshri Gayatri Food Products Pvt. Ltd. Milk magic");
+                Configuration configuration = new Configuration();
+                configuration.locale = locale;
+                getBaseContext().getResources().updateConfiguration(configuration,getBaseContext().getResources().getDisplayMetrics());
 
-                goToHomeButton.setText("Home");
-                button_LekhanHistory.setText("Lekhan \nHistory");
-
+                recreate();
 
                 popupWindow.dismiss(); // Dismiss the popup
             }
         });
 
-        hindiRadioButton.setOnClickListener(new View.OnClickListener() {
+        hindiText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle Hindi radio button click
-                languageButton.setText("हिंदी");
 
                 // Change text to Hindi
-                englishText.setText("अंग्रेजी");
-                hindiText.setText("हिंदी");
+                Locale locale = new Locale("hi");
+                Locale.setDefault(locale);
 
-                movingText.setText("जय श्री गायत्री फूड प्रोडक्ट्स प्रा. लिमिटेड मिल्क मैजिक");
-                AppName.setText("रामजी की सेना");
-                GotoTitle.setText("दैनिक दर्शन एवं राम नाम ध्यान \uD83D\uDC49");
-                ImpTemples.setText("\uD83D\uDEA9 अयोध्या के प्रमुख मंदिर");
-                ourMission.setText("\uD83C\uDFAF हमारा मिशन");
-                gloryOfRamNaam.setText("\uD83D\uDCD6 राम नाम की महिमा");
-                writingExperience.setText("✍\uFE0F लेखन अनुभव और प्रतिक्रिया \n");
-                Welcome.setText("रामजी की सेना में आपका स्वागत है");
-                JayShriRam.setText("जय श्री राम - \uD83D\uDE4E");
-                Rank.setText("आपका रैंक");
-                CurrentCount.setText("वर्तमान रामनाम गिनती");
-                TotalCount.setText("कुल रामनाम गिनती");
-                MalaCount.setText("कुल माला गिनती");
-                movingTextBottom.setText("जय श्री गायत्री फूड प्रोडक्ट्स प्रा. लिमिटेड मिल्क मैजिक");
+                Configuration configuration = new Configuration();
+                configuration.locale = locale;
+                getBaseContext().getResources().updateConfiguration(configuration,getBaseContext().getResources().getDisplayMetrics());
 
-                goToHomeButton.setText("घर");
-                button_LekhanHistory.setText("लेखन \n इतिहास");
+                recreate();
+
 
                 popupWindow.dismiss(); // Dismiss the popup
 
@@ -944,13 +964,13 @@ public class Profile extends AppCompatActivity{
         popupWindow.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
         // Find radio buttons in popup layout
-        RadioButton music0RadioButton = popupView.findViewById(R.id.Music0RadioButton);
-        RadioButton music1RadioButton = popupView.findViewById(R.id.Music1RadioButton);
-        RadioButton music2RadioButton = popupView.findViewById(R.id.Music2RadioButton);
-        RadioButton music3RadioButton = popupView.findViewById(R.id.Music3RadioButton);
-        RadioButton music4RadioButton = popupView.findViewById(R.id.Music4RadioButton);
-        RadioButton music5RadioButton = popupView.findViewById(R.id.Music5RadioButton);
-        RadioButton music6RadioButton = popupView.findViewById(R.id.Music6RadioButton);
+        LinearLayout music0RadioButton = popupView.findViewById(R.id.Music0);
+        LinearLayout music1RadioButton = popupView.findViewById(R.id.Music1);
+        LinearLayout music2RadioButton = popupView.findViewById(R.id.Music2);
+        LinearLayout music3RadioButton = popupView.findViewById(R.id.Music3);
+        LinearLayout music4RadioButton = popupView.findViewById(R.id.Music4);
+        LinearLayout music5RadioButton = popupView.findViewById(R.id.Music5);
+        LinearLayout music6RadioButton = popupView.findViewById(R.id.Music6);
 
         // Set click listener for radio buttons
         music0RadioButton.setOnClickListener(new View.OnClickListener() {

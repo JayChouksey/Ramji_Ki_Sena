@@ -7,8 +7,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:backgroundTint="@color/white">
 
         <LinearLayout
@@ -18,30 +18,20 @@
 
             <!-- First horizontal layout -->
             <LinearLayout
+                android:id="@+id/englishText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/englishText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="English"
+                    android:text="@string/english"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
 
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:id="@+id/englishRadioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="@color/gray" />
 
             </LinearLayout>
 
@@ -52,30 +42,19 @@
 
             <!-- Second horizontal layout -->
             <LinearLayout
+                android:id="@+id/hindiText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/hindiText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hindi"
+                    android:text="@string/hindi"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:id="@+id/hindiRadioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="@color/gray" />
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

@@ -78,20 +78,20 @@
                         android:id="@+id/app_img"
                         android:layout_width="45dp"
                         android:layout_height="40dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:background="@drawable/img_bg"
-                        app:shapeAppearanceOverlay="@style/roundedImageView"
-                        android:src="@drawable/ramjikisena_logo" />
+                        android:src="@drawable/icon_logoo"
+                        app:shapeAppearanceOverlay="@style/roundedImageView" />
 
 
                     <TextView
                         android:id="@+id/app_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="2dp"
                         android:layout_marginTop="5dp"
                         android:text="@string/app_name"
-                        android:textColor="@color/red"
+                        android:textColor="@color/brown"
                         android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -111,7 +111,7 @@
                         android:layout_height="36dp"
                         android:backgroundTint="@color/brown"
                         android:textColor="@color/white"
-                        android:text="Home"
+                        android:text="@string/home"
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:textAllCaps="false"
@@ -162,7 +162,7 @@
                         android:gravity="center"
                         android:text="@string/DailyDarshan"
                         android:textColor="@color/yellow"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -179,24 +179,26 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/Imp"
-                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp"
                             android:textColor="@color/yellow"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:textStyle="bold"
                             android:background="?android:attr/selectableItemBackground"
-                            android:clickable="true"/>
+                            android:clickable="true"
+                            android:focusable="true" />
 
                         <TextView
                             android:id="@+id/ourMission"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/missions"
-                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
                             android:textColor="@color/yellow"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:textStyle="bold"
                             android:background="?android:attr/selectableItemBackground"
-                            android:clickable="true"/>
+                            android:clickable="true"
+                            android:focusable="true" />
 
                     </LinearLayout>
 
@@ -207,10 +209,11 @@
                         android:gravity="center"
                         android:text="@string/glory"
                         android:textColor="@color/yellow"
-                        android:textSize="16dp"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         android:background="?android:attr/selectableItemBackground"
-                        android:clickable="true"/>
+                        android:clickable="true"
+                        android:focusable="true" />
 
                     <TextView
                         android:id="@+id/writingExperience"
@@ -219,11 +222,12 @@
                         android:gravity="center"
                         android:text="@string/write"
                         android:textColor="@color/yellow"
-                        android:textSize="16dp"
+                        android:textSize="16sp"
                         android:layout_marginTop="10dp"
                         android:textStyle="bold"
                         android:background="?android:attr/selectableItemBackground"
-                        android:clickable="true"/>
+                        android:clickable="true"
+                        android:focusable="true" />
 
                 </LinearLayout>
 
@@ -247,13 +251,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ram Naam Writing \n Experience &amp; Feedback"
+                        android:text="@string/ram_naam_writing_n_experience_amp_feedback"
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:layout_marginBottom="25dp"
                         android:layout_marginTop="15dp"
                         android:textStyle="bold"
-                        android:textSize="30dp"
+                        android:textSize="30sp"
                         android:textColor="@color/red"/>
 
                     <TextView
@@ -299,13 +303,13 @@
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="25dp"
-                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/fb"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="20dp"
+                            android:layout_marginEnd="20dp"
                             android:text="@string/fb"
                             android:textColor="@color/white"
                             android:textSize="18sp"
@@ -314,7 +318,7 @@
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="25dp"
-                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/youtube"/>
 
                         <TextView
@@ -345,12 +349,12 @@
                             android:layout_height="wrap_content"
                             android:text="@string/sposor"
                             android:textColor="@color/white"
-                            android:textSize="13dp"
+                            android:textSize="13sp"
                             android:textStyle="bold" />
 
                         <ImageView
                             android:id="@+id/sponsorLogoBottom"
-                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
                             android:layout_width="25dp"
                             android:layout_height="20dp"
                             android:src="@drawable/milk_magic_icon" />

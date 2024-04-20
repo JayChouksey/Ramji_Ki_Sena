@@ -165,6 +165,7 @@ public class Register extends AppCompatActivity {
                 @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
                 @Override
                 public void onClick(View v) {
+                    registerButton.setText("LOADING...");
                     // Get text from EditText fields
                     String userLoginID = editTextUserLoginID.getText().toString().trim();
                     String password = editTextPassword.getText().toString().trim();
@@ -184,7 +185,7 @@ public class Register extends AppCompatActivity {
                                     + "&city=" + URLEncoder.encode(city, StandardCharsets.UTF_8);
 
                             // Make POST request using Volley
-                            String api = "https://restapiramji.onrender.com/auth/register";
+                            String api = "https://api.ramjikisena.com/auth/register";
                             StringRequest request = new StringRequest(Request.Method.POST, api,
                                     new Response.Listener<String>() {
                                         @Override
@@ -192,6 +193,9 @@ public class Register extends AppCompatActivity {
                                             // Handle response if needed
                                             // For example, show a success message
                                             Toast.makeText(Register.this, "Registration successful!", Toast.LENGTH_SHORT).show();
+                                            registerButton.setText("REGISTER");
+                                            Intent intent = new Intent(Register.this, MainActivity.class);
+                                            startActivity(intent);
                                         }
                                     }, new Response.ErrorListener() {
                                 @Override
@@ -199,6 +203,7 @@ public class Register extends AppCompatActivity {
                                     // Handle error if needed
                                     // For example, show an error message
                                     Toast.makeText(Register.this, "Registration failed. Please try again.", Toast.LENGTH_SHORT).show();
+                                    registerButton.setText("REGISTER");
                                 }
                             }) {
                                 @Override
@@ -217,10 +222,12 @@ public class Register extends AppCompatActivity {
                         } else {
                             // If mobile number does not have 10 digits, show a message to the user
                             Toast.makeText(Register.this, "Please enter a 10-digit mobile number", Toast.LENGTH_SHORT).show();
+                            registerButton.setText("REGISTER");
                         }
                     } else {
                         // If any field is empty, show a message to the user
                         Toast.makeText(Register.this, "Please fill in all fields.", Toast.LENGTH_SHORT).show();
+                        registerButton.setText("REGISTER");
                     }
                 }
             });
